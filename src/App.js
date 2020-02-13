@@ -33,11 +33,12 @@ class App extends React.Component {
               }
             },
             () => {
-              console.log(this.state);
+              console.log("signed in", this.state);
             }
           );
         });
       } else {
+        console.log("signed out");
         this.setState({ currentUser: null });
       }
     });
