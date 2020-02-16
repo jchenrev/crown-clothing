@@ -1,6 +1,6 @@
 /* Used as starting data for Directory */
 
-const SECTIONS_DATA = [
+export const SECTIONS_DATA = [
   {
     title: "hats",
     // imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -39,5 +39,3 @@ const SECTIONS_DATA = [
     linkUrl: "shop/mens"
   }
 ];
-
-export default SECTIONS_DATA;
