@@ -24,13 +24,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         cartItems: removeItemFromCart(state.cartItems, action.payload)
       };
     case CartActionTypes.CLEAR_ITEM_FROM_CART:
-      console.log("reducer case remove item");
       return {
         ...state,
         cartItems: state.cartItems.filter(item => item.id !== action.payload.id)
       };
     default:
-      console.log("reducer case default");
       return state;
   }
 };
