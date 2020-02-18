@@ -32,6 +32,23 @@ export const addCollectionAndDocuments = async (
   return await batch.commit();
 };
 
+export const convertCollectionsSnapshotToMap = collectionsSnapshot => {
+  const transformedCollections = collectionsSnapshot.docs.map(doc => {
+    const { title, items } = doc.data();
+    return {
+      id: doc.id,
+      routeName: encodeURI(title.toLowerCase()),
+      title,
+      items
+    };
+  });
+
+  return transformedCollections.reduce((collectionsMap, collection) => {
+    collectionsMap[collection.title.toLowerCase()] = collection;
+    return collectionsMap;
+  }, {});
+};
+
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
