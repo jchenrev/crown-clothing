@@ -9,7 +9,6 @@ import { signOutStart } from "../../redux/user/user.actions";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
-import "./header.styles.scss";
 import {
   HeaderContainer,
   LogoContainer,

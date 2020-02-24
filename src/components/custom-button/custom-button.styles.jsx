@@ -45,8 +45,6 @@ const getButtonStyles = ({ isGoogleSignIn, inverted }) => {
 };
 
 export const CustomButtonContainer = styled.button`
-  display: flex;
-  justify-content: center;
   min-width: 165px;
   width: auto;
   height: 50px;
@@ -57,7 +55,9 @@ export const CustomButtonContainer = styled.button`
   text-transform: uppercase;
   font-family: "Open Sans Condensed";
   font-weight: bolder;
-  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 
   ${getButtonStyles}
 `;
